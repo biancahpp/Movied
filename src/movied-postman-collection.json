@@ -1,0 +1,166 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Movied",
+		"_postman_id": "28793a6c-8197-6197-f1a0-583a5de4783a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Search for a movie",
+			"request": {
+				"url": "{{url}}/search?q=inception",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Movie details",
+			"request": {
+				"url": "{{url}}/movie/27205",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Categories list",
+			"request": {
+				"url": "{{url}}/categories",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Movies by category",
+			"request": {
+				"url": "{{url}}/categories/28",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create a User",
+			"request": {
+				"url": "{{url}}/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"codeworks\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Me (current user)",
+			"request": {
+				"url": "{{url}}/me",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-User",
+						"value": "arol",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Review",
+			"request": {
+				"url": "{{url}}/movie/27205/review",
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-User",
+						"value": "arol",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"stars\":5\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendations",
+			"request": {
+				"url": "{{url}}/recommendations",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-User",
+						"value": "tom",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"stars\":5\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Discover",
+			"request": {
+				"url": "{{url}}/discover",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
