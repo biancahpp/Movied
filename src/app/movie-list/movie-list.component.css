@@ -1,0 +1,27 @@
+.movie-list {
+  /* background-color: bisque; */
+  height: 50%;
+}
+
+.movie-list-title {
+  padding-bottom: 2rem;
+  color: #eeeeee;
+  height: 10%;
+  font-size: 2.3rem;
+}
+
+.movie-list-movies {
+  display: flex;
+  overflow-x: scroll;
+  height: 80%;
+  /* background-color: blue; */
+}
+
+.movie-list-movies-movie {
+  height: 100%;
+  min-width: 60%;
+  margin-right: 2rem;
+  background-image: url("../../assets/e913301e022e272d52b588bea0331ff5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
