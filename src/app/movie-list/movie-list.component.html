@@ -1,18 +1,13 @@
 <div class="movie-list">
-  <h1 class="movie-list-title">Title</h1>
+  <h1 class="movie-list-title">BOX-OFFICE</h1>
   <div class="movie-list-movies">
-    <!-- <div class="movie-list-movie-wrapper">
-      <img
-        src="../../assets/e913301e022e272d52b588bea0331ff5.jpg"
-        alt="movie"
-      />
-    </div> -->
-    <div class="movie-list-movies-movie"></div>
-    <div class="movie-list-movies-movie"></div>
-    <div class="movie-list-movies-movie"></div>
-    <div class="movie-list-movies-movie"></div>
-    <div class="movie-list-movies-movie"></div>
-    <div class="movie-list-movies-movie"></div>
-    <div class="movie-list-movies-movie"></div>
+    <div
+      class="movie-list-movies-movie"
+      *ngFor="let movie of discoverMovies"
+      [ngStyle]="{
+        'background-image':
+          'url(' + 'https://image.tmdb.org/t/p/w300' + movie.poster_path + ')'
+      }"
+    ></div>
   </div>
 </div>

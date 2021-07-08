@@ -13,15 +13,13 @@
 .movie-list-movies {
   display: flex;
   overflow-x: scroll;
-  height: 80%;
-  /* background-color: blue; */
+  height: 90%;
 }
 
 .movie-list-movies-movie {
   height: 100%;
   min-width: 60%;
   margin-right: 2rem;
-  background-image: url("../../assets/e913301e022e272d52b588bea0331ff5.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
