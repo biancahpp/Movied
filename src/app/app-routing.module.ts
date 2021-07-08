@@ -6,7 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'movie-info', component: MovieDetailsComponent },
+  { path: 'movie-info/:id', component: MovieDetailsComponent },
 ];
 
 @NgModule({

@@ -4,7 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { Movie } from './movie';
 import { Category } from './category';
-// import requestLinks from '../movied-postman-collection.json';
+import { MovieDetails } from './movie-details';
 
 @Injectable({
   providedIn: 'root',
@@ -25,5 +25,10 @@ export class MovieService {
   getCategories(): Observable<Category[]> {
     const url = `http://movied.herokuapp.com/categories`;
     return this.http.get<Category[]>(url);
+  }
+
+  getMovieById(id: number): Observable<MovieDetails> {
+    const url = `http://movied.herokuapp.com/movie/${id}`;
+    return this.http.get<MovieDetails>(url);
   }
 }
