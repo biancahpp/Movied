@@ -1,6 +1,7 @@
 .movie-list {
-  /* background-color: bisque; */
-  height: 50%;
+  /* background-color: rgb(180, 117, 40); */
+  margin-bottom: 2rem;
+  height: 45vh;
 }
 
 .movie-list-title {

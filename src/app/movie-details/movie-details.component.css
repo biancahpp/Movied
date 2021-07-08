@@ -1,0 +1,69 @@
+.movie-details {
+  /* background-color: bisque; */
+  height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+
+  color: #eff0f0;
+}
+
+.movie-details-img-wrapper {
+  height: 60%;
+  width: 100%;
+  /* background-color: blue; */
+
+  display: flex;
+  justify-content: center;
+}
+
+.movie-details-img {
+  height: 100%;
+}
+
+.movie-details-info {
+  padding-top: 2rem;
+  /* background-color: #1a191a; */
+}
+
+.movie-details-info-title {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.movie-details-info-sub-title {
+  color: #868584;
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.production-wrapper {
+  padding-bottom: 2rem;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.details-production {
+  color: #868584;
+  padding-right: 1rem;
+}
+
+.genre-wrapper {
+  padding-bottom: 2rem;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.details-genre {
+  color: #868584;
+  padding-right: 1rem;
+}
+
+.movie-details-info-rating {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 3rem;
+}
+
+.movie-details-description {
+  font-size: 1.2rem;
+}

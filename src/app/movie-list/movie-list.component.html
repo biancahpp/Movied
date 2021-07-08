@@ -11,3 +11,17 @@
     ></div>
   </div>
 </div>
+
+<div class="movie-list" *ngFor="let category of AllMovies">
+  <h1 class="movie-list-title">{{ category.name }}</h1>
+  <div class="movie-list-movies">
+    <div
+      class="movie-list-movies-movie"
+      *ngFor="let movie of category.movies"
+      [ngStyle]="{
+        'background-image':
+          'url(' + 'https://image.tmdb.org/t/p/w300' + movie.poster_path + ')'
+      }"
+    ></div>
+  </div>
+</div>

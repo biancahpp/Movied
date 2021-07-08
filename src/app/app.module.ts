@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 // import { MatIconModule } from '@angular/material/icon';
 
 // const MaterialComponents = [MatIconModule];
@@ -16,6 +17,7 @@ import { MovieListComponent } from './movie-list/movie-list.component';
     HeaderComponent,
     DashboardComponent,
     MovieListComponent,
+    MovieDetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
