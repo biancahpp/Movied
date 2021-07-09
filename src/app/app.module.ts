@@ -7,9 +7,9 @@ import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
-// import { MatIconModule } from '@angular/material/icon';
-
-// const MaterialComponents = [MatIconModule];
+import { AngularSvgIconModule } from 'angular-svg-icon';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeLinkComponent } from './home-link/home-link.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +18,15 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
     DashboardComponent,
     MovieListComponent,
     MovieDetailsComponent,
+    HomeLinkComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    AngularSvgIconModule.forRoot(),
+    NgbModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

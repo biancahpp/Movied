@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../movie.service';
-import { Movie } from '../movie';
-import { Category } from '../category';
-import { AllMovies } from '../all-movies';
+import { Movie } from '../interfaces/movie';
+import { Category } from '../interfaces/category';
+import { AllMovies } from '../interfaces/all-movies';
 
 @Component({
   selector: 'app-movie-list',
   templateUrl: './movie-list.component.html',
-  styleUrls: ['./movie-list.component.css'],
+  styleUrls: ['./movie-list.component.scss'],
 })
 export class MovieListComponent implements OnInit {
   categories: Category[] = [];
@@ -30,7 +30,7 @@ export class MovieListComponent implements OnInit {
 
     this.movies
       .getDiscoverMovies()
-      .subscribe((data) => ((this.discoverMovies = data), console.log(data)));
+      .subscribe((data) => (this.discoverMovies = data));
   }
 
   ngOnInit(): void {}

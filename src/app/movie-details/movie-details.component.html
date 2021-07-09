@@ -1,33 +1,40 @@
 <div class="movie-details" *ngIf="movieInfo">
+  <app-home-link class="home-link"></app-home-link>
   <div class="movie-details-img-wrapper">
     <img
-      src="https://image.tmdb.org/t/p/w300{{ movieInfo.backdrop_path }}"
-      alt="movie picture"
-      class="movie-details-img"
+      src="https://image.tmdb.org/t/p/w300{{ movieInfo.poster_path }}"
+      alt="Movie Poster"
     />
   </div>
   <div class="movie-details-info">
-    <h1 class="movie-details-info-title">{{ movieInfo.title }}</h1>
-    <h3 class="movie-details-info-sub-title">
+    <h1>{{ movieInfo.title }}</h1>
+    <h3>
       {{ movieInfo.tagline }}
     </h3>
-    <p class="production-wrapper">
-      <span class="details-production">Production Company</span>
+    <p>
+      <span class="p-title">Production Company</span>
       <span
-        class="details-production-name"
+        class="p-names"
         *ngFor="let prodCompany of movieInfo.production_companies"
         >{{ prodCompany.name }}</span
       >
     </p>
-    <p class="genre-wrapper">
-      <span class="details-genre">Genre</span>
-      <span class="details-genre-name" *ngFor="let genre of movieInfo.genres"
+    <p>
+      <span class="p-title">Genre</span>
+      <span class="p-names" *ngFor="let genre of movieInfo.genres"
         >{{ genre.name }}
       </span>
     </p>
-    <div class="movie-details-info-rating">Stars</div>
+    <div class="movie-details-info-rating">
+      <ngb-rating
+        [(rate)]="currentRate"
+        [max]="5"
+        [readonly]="true"
+      ></ngb-rating>
+      <p>Rating: {{ currentRate ? currentRate : "Not Available" }}</p>
+    </div>
   </div>
   <div class="movie-details-description">
-    <p>{{ movieInfo.overview }}</p>
+    <span>{{ movieInfo.overview }}</span>
   </div>
 </div>

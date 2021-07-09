@@ -25,6 +25,6 @@ export interface MovieDetails {
   tagline: string;
   title: string;
   video: boolean;
-  vote_average: number;
+  vote_average: any;
   vote_count: number;
 }

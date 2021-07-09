@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import { Movie } from './movie';
-import { Category } from './category';
-import { MovieDetails } from './movie-details';
+import { Movie } from './interfaces/movie';
+import { Category } from './interfaces/category';
+import { MovieDetails } from './interfaces/movie-details';
 
 @Injectable({
   providedIn: 'root',
